@@ -27,12 +27,13 @@ body {
     padding-block-end: 5px;
 }
 .card__header{
-    block-size: 7rem;
+    block-size: 8rem;
     inline-size: 100%;
-    padding: 20px;
     display: grid;
-    grid-template-columns: 60px 20px auto;
+    grid-template-columns: 20px 60px 20px auto;
     grid-template-rows: 70px;
+    justify-content: start;
+    align-content: center;
     place-items: center;
 }
 span {
@@ -43,6 +44,7 @@ span {
     cursor: pointer;
 }
 .card__thumbnail {
+    grid-column: 2 / 3 ;
     inline-size: 5rem;
     block-size: 5rem;
     background-color: var(--color-thumdail);
@@ -52,7 +54,7 @@ span {
 }
 .card__body {
     color: var(--titles);
-    grid-column: 3 / 4;
+    grid-column: -2 / -1;
     justify-self: start;
 }
 .card__title {
