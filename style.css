@@ -1,0 +1,115 @@
+:root {
+    --color-thumdail: #85F4FF;
+    --titles: #EFFFFD;
+    --color-buttons: #B8FFF9;
+    --card-exterior: #42C2FF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+.card {
+    inline-size: 340px;
+    margin: 120px auto;
+    background-color: var(--card-exterior);
+    border-radius: 20px;
+    padding-block-end: 5px;
+}
+.card__header{
+    block-size: 7rem;
+    inline-size: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+span {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.card__thumbnail {
+    inline-size: 5rem;
+    block-size: 5rem;
+    background-color: var(--color-thumdail);
+    border:3px solid var(--titles);
+    border-radius: 50%;
+    background-image: url("./assets/img/psychology-ge32dc6979_640.png");
+}
+.card__body {
+    color: var(--titles);
+    margin-inline-start: 20px;
+}
+.card__title {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.card__subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.card__figure {
+    inline-size: 100%;
+    block-size: 150px;
+    margin: 20px 0;
+}
+.card__image {
+    inline-size: 100%;
+}
+.card__menu {
+    inline-size: 330px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: var(--titles);
+    box-shadow: 23px -16px 48px -6px rgba(0,0,0,0.58);
+}
+.card__copy {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-block-end: 30px;
+}
+.card__footer {
+    inline-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    inline-size: 80px;
+    margin: 2px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-buttons);
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Fredoka', sans-serif;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: var(--card-exterior);
+    color: var(--titles);
+}
+.icon {
+    margin: 0 6px;
+    inline-size: 25px;
+    block-size: 25px;
+}
+.icon:first-child  {
+    background-image: url("./assets/icons/favorite_black_24dp.svg");
+}
+.icon:last-child {
+    background-image: url("./assets/icons/share_black_24dp.svg");   
+}
