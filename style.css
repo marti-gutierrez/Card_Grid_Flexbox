@@ -21,6 +21,7 @@ body {
 .card {
     inline-size: 340px;
     margin: 120px auto;
+
     background-color: var(--card-exterior);
     border-radius: 20px;
     padding-block-end: 5px;
@@ -29,8 +30,10 @@ body {
     block-size: 7rem;
     inline-size: 100%;
     padding: 20px;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 60px 20px auto;
+    grid-template-rows: 70px;
+    place-items: center;
 }
 span {
     display: inline-block;
@@ -49,7 +52,8 @@ span {
 }
 .card__body {
     color: var(--titles);
-    margin-inline-start: 20px;
+    grid-column: 3 / 4;
+    justify-self: start;
 }
 .card__title {
     font-size: 2rem;
@@ -82,13 +86,13 @@ span {
 }
 .card__footer {
     inline-size: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(7,40px);
+    grid-template-rows: 40px;
+    place-items: center;
 }
 .button {
-    inline-size: 80px;
-    margin: 2px;
+    inline-size: 75px;
     padding: 8px;
     border: none;
     border-radius: 10px;
@@ -98,18 +102,25 @@ span {
     font-family: 'Fredoka', sans-serif;
     cursor: pointer;
 }
+.button:first-child {
+    grid-column: 1 / 3;
+}
+.button:nth-child(2) {
+    grid-column: span 2;
+}
 .button:hover {
     background-color: var(--card-exterior);
     color: var(--titles);
 }
 .icon {
-    margin: 0 6px;
     inline-size: 25px;
     block-size: 25px;
 }
-.icon:first-child  {
+.icon:nth-child(3)  {
     background-image: url("./assets/icons/favorite_black_24dp.svg");
+    grid-column: -3 / -2;
 }
 .icon:last-child {
-    background-image: url("./assets/icons/share_black_24dp.svg");   
+    background-image: url("./assets/icons/share_black_24dp.svg"); 
+    grid-column: -2 / -1;  
 }
